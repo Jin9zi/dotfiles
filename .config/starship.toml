@@ -1,0 +1,65 @@
+add_newline = false
+format = """
+[](#9A348E)\
+$os\
+$username\
+[](bg:#DA627D fg:#9A348E)\
+$directory\
+[](fg:#DA627D bg:#FCA17D)\
+$git_branch\
+$git_status\
+[](fg:#FCA17D bg:#86BBD8)\
+$nodejs\
+$rust\
+$golang\
+[](fg:#86BBD8 bg:#06969A)\
+$time\
+[ ](fg:#06969A)\
+"""
+
+[username]
+show_always = true
+style_user = "bg:#9A348E fg:#ffffff"
+style_root = "bg:#9A348E fg:#ffffff"
+format = "[  $user ]($style)"
+
+[directory]
+style = "bg:#DA627D fg:#ffffff"
+format = "[  $path ]($style)"
+truncation_length = 3
+
+[git_branch]
+symbol = ""
+style = "bg:#FCA17D fg:#000000"
+format = "[ $symbol $branch ]($style)"
+
+[git_status]
+style = "bg:#FCA17D fg:#000000"
+format = "[($all_status$ahead_behind )]($style)"
+
+[nodejs]
+symbol = ""
+style = "bg:#86BBD8 fg:#000000"
+format = "[ $symbol $version ]($style)"
+
+[rust]
+symbol = ""
+style = "bg:#86BBD8 fg:#000000"
+format = "[ $symbol $version ]($style)"
+
+[golang]
+symbol = ""
+style = "bg:#86BBD8 fg:#000000"
+format = "[ $symbol $version ]($style)"
+
+[os]
+style = "bg:#9A348E fg:#ffffff"
+disabled = false
+format = "[ $symbol ]($style)"
+symbols = { Linux = "", Ubuntu = "", SUSE = "", Fedora = "", Arch = "", Debian = "" }
+
+[time]
+disabled = false
+time_format = "%Y-%m-%d %H:%M"
+style = "bg:#06969A fg:#ffffff"
+format = "[  $time ]($style)"
